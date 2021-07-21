@@ -18,7 +18,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
         rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
 
     <style>
         body {
@@ -73,7 +83,9 @@
         }
 
         .work-button {
-            padding: 6% 0%;
+            padding: 5% 0%;
+            display: inline-block;
+            padding-right: 2%;
         }
 
         .title {
@@ -82,6 +94,7 @@
 
         .nav-link {
             color: white;
+            font-weight: bold;
         }
 
         .white {
@@ -149,38 +162,60 @@
         .white {
             color: white;
         }
+
+        #projects {
+            padding-top: 20%;
+        }
+
+        #hello {
+            padding-top: 18%;
+        }
+
+        .navbar-fixed-top.scrolled {
+            background-color: #1f1e24 !important;
+            transition: background-color 200ms linear;
+            opacity: 1;
+        }
+
+        .active {
+            border-bottom: 1px solid;
+        }
+
+        .blackish {
+            background-color: #1f1e24;
+        }
     </style>
 </head>
 
 <body class='dark-vertion black-bg'>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <!-- <a class="navbar-brand" href="#">Shapira</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" style='color:white;'>Home</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#" style='color:white;'>About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style='color:white;'>Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style='color:white;'>Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style='color:white;'>Contact</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top">
+            <!-- <div class="container-fluid"> -->
+            <!-- <a class="navbar-brand" href="#">Shapira</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style='color:white;'>Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#about" style='color:white;'>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" style='color:white;'>Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" style='color:white;'>Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style='color:white;'>Contact</a>
+                    </li>
+                </ul>
             </div>
+            <!-- </div> -->
         </nav>
         <section id='hello'>
             <div class="row">
@@ -194,8 +229,17 @@
                     <button class="fab fa-twitter contact-item btn white"></button>
                     <button class="far fa-envelope contact-item btn white"></button>
                     <br>
-                    <div class=' work-button'>
-                        <button type="button" class="btn btn-success">See My Work</button>
+                    <div class='work-button'>
+
+                        <button type="button" class="btn btn-outline-success" style='width:10rem;'>
+                            See My Work
+                            <i class="fas fa-laptop-code" style='padding-left:5%;'></i>
+                        </button>
+                    </div>
+
+                    <div class='work-button'>
+                        <button type="button" class="btn btn-success" style='width:10rem;'>Hire Me Now<i
+                                class="fas fa-briefcase" style='padding-left:5%;'></i></button>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -210,10 +254,10 @@
         </section>
         <section id='about'>
             <div class="row">
-                <div class="col-lg-6 rtl">
+                <div class="col-lg-6 mid">
                     <img class="about-image" src="ab-img.png" alt="iphone-mockup" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 mid">
                     <h2 class='little-bold'>About Me</h2>
                     Hello, I'm Yaron, web-developer and a Python programmer based in Israel. I have a rich experience in
                     web-developing, front to end, AI with Python, game-dev with Pygame
@@ -251,7 +295,7 @@
             <h2 class='mid little-bold'>What I do</h2>
             <div class="row">
                 <div class="feature-box col-lg-4">
-                    <div class="card text-white bg-dark mb-3 shadow-lg p-3">
+                    <div class="card text-white mb-3 shadow-lg p-3 blackish">
                         <div class="card-body mid">
                             <i class="fas fa-code fa-3x" style='padding-bottom:5%;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Web Development</h2>
@@ -261,7 +305,7 @@
                     </div>
                 </div>
                 <div class="feature-box col-lg-4">
-                    <div class="card text-white bg-dark mb-3 shadow-lg p-3">
+                    <div class="card text-white mb-3 shadow-lg p-3 blackish">
                         <div class="card-body mid">
 
                             <i class="fab fa-python fa-3x" style='padding-bottom:5%;'></i>
@@ -272,7 +316,7 @@
                     </div>
                 </div>
                 <div class="feature-box col-lg-4">
-                    <div class="card text-white bg-dark mb-3 shadow-lg p-3">
+                    <div class="card text-white mb-3 shadow-lg p-3 blackish">
                         <div class="card-body mid">
                             <i class="fas fa-robot fa-3x" style='padding-bottom:5%;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>AI</h2>
@@ -375,10 +419,11 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <br>
 
+        </section>
+
+        <section id='projects'>
+            <h2 class='mid'>My Recent Portfolio</h2>
         </section>
 
     </div>
