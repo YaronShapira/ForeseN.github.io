@@ -184,6 +184,19 @@
         .blackish {
             background-color: #1f1e24;
         }
+
+        .flappy-bird {
+            width: 50%;
+            margin: auto;
+        }
+
+        .bs-linebreak {
+            height: 10px;
+        }
+
+        ngb-carousel:focus {
+            outline: none;
+        }
     </style>
 </head>
 
@@ -260,7 +273,7 @@
                 <div class="col-lg-6 mid">
                     <h2 class='little-bold'>About Me</h2>
                     Hello, I'm Yaron, web-developer and a Python programmer based in Israel. I have a rich experience in
-                    web-developing, front to end, AI with Python, game-dev with Pygame
+                    web-developing, front to end, AI with Python, game-dev with Pygame,
                     Raspberry Pi, Arduino and much much more.
                     <br>
                     <br>
@@ -424,6 +437,105 @@
 
         <section id='projects'>
             <h2 class='mid'>My Recent Portfolio</h2>
+            <div class='row' style='padding-top: 5%;'>
+                <div class='col-lg-6'>
+                    <div id="carousel_1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="ChromeDinoPHOTO.png" class="d-block w-100" alt="..." style='height: 450px;'>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="FlappyBirdPhoto.png" class="d-block w-50 flappy-bird" alt="..."
+                                    style='height: 450px;'>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="dino_generation_info.png" class="d-block w-100" alt="..."
+                                    style='height: 450px;'>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel_1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class='col-lg-1'></div>
+                <div class='col-lg-5 mid'>
+                    <h2>Python Machine Learning With NeuroEvolution of Augmenting Topologies (NEAT)</h2>
+                    <div style='padding-top:5%;'>
+                        These Project are all about teaching AI how to play a simple game (Flappy Bird, Chrome Dino
+                        Game,
+                        Snake) which I built using the Pygame
+                        library.
+                        In order to train the AI, I used the NEAT algorithm.
+                        NEAT is an evolutionary algorithm that creates artificial neural networks.
+                        NEAT is an algorithm which takes a batch of AIs (genomes) attempting to accomplish a given task.
+                        The top performing AIs “breed” to create the next generation.
+                        This process continues until we have a generation which is capable of completing what it needs
+                        to.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style='padding: 12% 0%;'>
+            <hr>
+        </div>
+        <section id='projects2'>
+            <div class='row'>
+                <div class='col-lg-6'>
+                    <div id="carousel_2" class="carousel slide" data-bs-ride="carousel_2">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="loginpage2.png" class="d-block w-100" alt="..." style='height: 450px;'>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="registerpage2.png" class="d-block w-100" alt="..." style='height: 450px;'>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="contactpage2.png" class="d-block w-100" alt="..." style='height: 450px;'>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="chat2.png" class="d-block w-100" alt="..." style='height: 450px;'>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel_2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class='col-lg-1'></div>
+                <div class='col-lg-5 mid'>
+                    <h2>DarkChat - Realtime Chat website based on Flask and SocketIO.</h2>
+                    <div style='padding-top:5%;'>
+                        The chat is handled by SocketIO which is a library that enables event-based communication
+                        between clients and a server. Flask handles the interaction with the user database. For the
+                        Database I used SQLAlchemy.
+                        DarkChat has a Login page, Register page, Contact page and a Chat page.
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+        <div style='padding: 12% 0%;'>
+            <hr>
+        </div>
+        <section id='projects3'>
+
         </section>
 
     </div>
