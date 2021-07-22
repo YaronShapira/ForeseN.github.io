@@ -198,11 +198,42 @@
         ngb-carousel:focus {
             outline: none;
         }
+
+        .face {
+            width: 90%;
+            height: auto;
+        }
+
+        .bg {
+            background-image: url('bg.jpg');
+        }
+
+        .demo-bg {
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .demo-bg2 {
+            opacity: 0.15;
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+
+        .demo-content {
+            position: relative;
+        }
     </style>
 </head>
 
 <body class='dark-vertion black-bg'>
-    <div class="container">
+    <img class="demo-bg" src="bg3 - ready.jpg" alt="">
+    <div class="container demo-content">
+        <!-- <div class='bg'> -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top">
             <!-- <div class="container-fluid"> -->
             <!-- <a class="navbar-brand" href="#">Shapira</a> -->
@@ -225,7 +256,7 @@
                         <a class="nav-link" href="#projects" style='color:white;'>Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style='color:white;'>Contact</a>
+                        <a class="nav-link" href="#contact" style='color:white;'>Contact</a>
                     </li>
                 </ul>
             </div>
@@ -233,13 +264,13 @@
         </nav>
         <section id='hello'>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                     <h3>Hey There !</h3>
                     <h1>I am Yaron Shapira</h1>
                     <h2>Computer Science Student and a Freelancer</h2>
                     <button class="fab fa-facebook-f contact-item btn white"></button>
                     <button class="fab fa-instagram contact-item btn white"></button>
-                    <button class="fab fa-whatsapp contact-item btn white"></button>
+                    <button class="fab fa-github contact-item btn white"></button>
                     <button class="fab fa-twitter contact-item btn white"></button>
                     <button class="far fa-envelope contact-item btn white"></button>
                     <br>
@@ -256,22 +287,19 @@
                                 class="fas fa-briefcase" style='padding-left:5%;'></i></button>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <!-- <img
-                        class="title-image"
-                        src="images/iphone6.png"
-                        alt="iphone-mockup"
-                    /> -->
+                <div class="col-lg-4">
+                    <img class="title-image face" src="face.png" alt="iphone-mockup" />
                 </div>
 
             </div>
         </section>
+        <!-- </div> -->
         <section id='about'>
             <div class="row">
                 <div class="col-lg-6 mid">
-                    <img class="about-image" src="ab-img.png" alt="iphone-mockup" />
+                    <img class="about-image" src="pc3.png" alt="iphone-mockup" />
                 </div>
-                <div class="col-lg-6 mid">
+                <div class="col-lg-6 mid d-flex flex-column justify-content-center">
                     <h2 class='little-bold'>About Me</h2>
                     Hello, I'm Yaron, web-developer and a Python programmer based in Israel. I have a rich experience in
                     web-developing, front to end, AI with Python, game-dev with Pygame,
@@ -304,8 +332,14 @@
 
             </div>
         </section>
-
+    </div>
+    <div class="container demo-content">
         <section id="features">
+            <!-- <img
+                class="demo-bg2"
+                src="bg3 - ready.jpg"
+                alt=""
+            > -->
             <h2 class='mid little-bold'>What I do</h2>
             <div class="row">
                 <div class="feature-box col-lg-4">
@@ -313,8 +347,10 @@
                         <div class="card-body mid">
                             <i class="fas fa-code fa-3x" style='padding-bottom:5%;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Web Development</h2>
-                            <p class="card-text">Fruit saw for brought fish forth had ave is man a that their Two he is
-                                dominion evening their Fruit saw for brought fish forth</p>
+                            <p class="card-text">Responsive websites built for an optimal user experience. Front to end,
+                                I take care of everything and makes sure
+                                that everything is smooth as butter.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -324,8 +360,8 @@
 
                             <i class="fab fa-python fa-3x" style='padding-bottom:5%;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Python</h2>
-                            <p class="card-text">Fruit saw for brought fish forth had ave is man a that their Two he is
-                                dominion evening their Fruit saw for brought fish forth</p>
+                            <p class="card-text">From Data Science to game developing. With Python as my main
+                                programming language, I can statisfy my customer without any problems.</p>
                         </div>
                     </div>
                 </div>
@@ -334,16 +370,17 @@
                         <div class="card-body mid">
                             <i class="fas fa-robot fa-3x" style='padding-bottom:5%;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>AI</h2>
-                            <p class="card-text">Fruit saw for brought fish forth had ave is man a that their Two he is
-                                dominion evening their Fruit saw for brought fish forth</p>
+                            <p class="card-text">Machine Learning is something very extraordinary. with NeuroEvolution
+                                of Augmenting Topologies, nothing is a challenge for my AI.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
 
 
-
+    <div class="container demo-content">
         <section id='skills'>
             <div class='row'>
 
@@ -604,12 +641,13 @@
             <br>
 
         </section>
-        <div style='padding: 12% 0%;'>
+        <div style='padding-top:12%; padding-bottom:7%;'>
             <hr>
         </div>
-        <section>
+        <section id='miniprojects' style=padding-bottom:10%;>
             <div class='row'>
                 <div class='col-lg-4 mid'>
+                    <i class="fas fa-microphone fa-4x"></i>
                     <h2>Lucy Voice Assistant</h2>
                     <div style='padding-top:5%;'>
                         Lucy is a Voice Assistant that can you help in your day to day lives on the PC.
@@ -622,6 +660,7 @@
                     </div>
                 </div>
                 <div class='col-lg-4 mid'>
+                    <i class="fas fa-gamepad fa-4x"></i>
                     <h2>Game Downloader</h2>
                     <div style='padding-top:5%;'>
                         Game Downloader is an application that downloades games from IGG.
@@ -634,6 +673,7 @@
                     </div>
                 </div>
                 <div class='col-lg-4 mid'>
+                    <i class="fas fa-space-shuttle fa-4x"></i>
                     <h2>Space Invaders Game</h2>
                     <div style='padding-top:5%;'>
                         Space Invaders is a 1978 shoot 'em up arcade game. I remade the game with different assets,
@@ -650,6 +690,83 @@
         </section>
 
     </div>
+
+    <img class="demo-bg2" src="secondbg - copy.jpg" alt="">
+    <div class="container demo-content">
+        <section id='contact' style='padding-top: 10%;'>
+            <div class='row'>
+                <div class='col-lg-3'>
+
+                </div>
+                <div class='col-lg-6'>
+                    <h2 class='mid' style='padding-bottom:9%;'>Let's Collaborate!</h2>
+                    <form>
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <div class="mb-3">
+                                    <!-- <label for="exampleInputEmail1" class="form-label">Your Fullname</label> -->
+                                    <input type="email" class="form-control transparent-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder='First Name'>
+
+                                </div>
+                            </div>
+                            <div class='col-lg-6'>
+                                <div class="mb-3">
+                                    <!-- <label for="exampleInputEmail1" class="form-label">Your Fullname</label> -->
+                                    <input type="email" class="form-control transparent-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder='Last Name'>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <!-- <label for="exampleInputPassword1" class="form-label">Your Email</label> -->
+                            <input type="password" class="form-control transparent-input" id="exampleInputPassword1"
+                                placeholder='Your Email'>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <!-- <label for="exampleFormControlTextarea1" class="form-label">Your Message</label> -->
+                            <textarea class="form-control transparent-input" id="exampleFormControlTextarea1" rows="5"
+                                placeholder='Your Message'></textarea>
+                        </div>
+                        <div style='padding-top:5%;'>
+                            <button type="submit" class="btn btn-outline-success rounded-pill" style='width:100%;'>Send
+                                Message</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class='col-lg-3'>
+
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+
+        <section id='footer' style='padding-top:8%;'>
+            <div class='mid'>
+                Copyright © 2021 by Yaron Shapira. All rights reserved.
+                <div style='padding-top:2%;'>
+                    <button class="fab fa-facebook-f contact-item btn white"></button>
+                    <button class="fab fa-instagram contact-item btn white"></button>
+                    <button class="fab fa-whatsapp contact-item btn white"></button>
+                    <button class="fab fa-twitter contact-item btn white"></button>
+                    <button class="far fa-envelope contact-item btn white"></button>
+                    <button class="fab fa-github contact-item btn white"></button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <style>
+        .transparent-input {
+            background-color: rgba(0, 0, 0, 0) !important;
+        }
+    </style>
+
+
 </body>
 
 </html>
