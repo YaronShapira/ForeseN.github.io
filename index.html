@@ -227,14 +227,44 @@
         .demo-content {
             position: relative;
         }
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            [class*="mobile-mid"] {
+                text-align: center;
+            }
+
+            [class*="mobile-padding-top"] {
+                padding-top: 8%;
+            }
+
+            [class*="responsive"] {
+                width: 100%;
+                height: auto;
+            }
+            [class*="mobile-hide"] {
+                visibility: hidden;
+                display: none;
+            }
+
+            [class*="mobile-hide"] {
+                visibility: hidden;
+                display: none;
+            }
+
+            [class*="h1-mobile-smaller"] {
+                font-size: 3.0rem;
+            }
+        }
     </style>
 </head>
 
 <body class='dark-vertion black-bg'>
-    <img class="demo-bg" src="bg3 - ready.jpg" alt="">
+    <img class="demo-bg responsive" src="bg3 - ready.jpg" alt="">
     <div class="container demo-content">
         <!-- <div class='bg'> -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-fixed-top">
             <!-- <div class="container-fluid"> -->
             <!-- <a class="navbar-brand" href="#">Shapira</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -263,10 +293,13 @@
             <!-- </div> -->
         </nav>
         <section id='hello'>
-            <div class="row">
-                <div class="col-lg-8">
+            <div class="row mobile-mid">
+                <div class="col-sm-4 order-lg-1">
+                    <img class="title-image face" src="face2.png" alt="iphone-mockup" />
+                </div>
+                <div class="col-sm-8 mobile-padding-top">
                     <h3>Hey There !</h3>
-                    <h1>I am Yaron Shapira</h1>
+                    <h1 class='h1-mobile-smaller'><span class='mobile-hide'>I am </span>Yaron Shapira</h1>
                     <h2>Computer Science Student and a Freelancer</h2>
                     <button class="fab fa-facebook-f contact-item btn white"></button>
                     <button class="fab fa-instagram contact-item btn white"></button>
@@ -287,9 +320,7 @@
                                 class="fas fa-briefcase" style='padding-left:5%;'></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <img class="title-image face" src="face2.png" alt="iphone-mockup" />
-                </div>
+
 
             </div>
         </section>
@@ -432,7 +463,7 @@
                 <div class='col-lg-2'></div>
 
 
-                <div class='col-lg-5'>
+                <div class='col-lg-5 mobile-padding-top'>
                     <h2 class='mid'>Professional Skills</h2>
                     <div class='row' style='padding-top: 5%;'>
                         <div class='col-lg-6'>
@@ -659,7 +690,7 @@
                         <img src="voiceassistant.png" class="d-block w-100" alt="..." style='height: 150px;'>
                     </div>
                 </div>
-                <div class='col-lg-4 mid'>
+                <div class='col-lg-4 mid mobile-padding-top'>
                     <i class="fas fa-gamepad fa-4x"></i>
                     <h2>Game Downloader</h2>
                     <div style='padding-top:5%;'>
@@ -672,7 +703,7 @@
                         <img src="gamedownloader.png" class="d-block w-100" alt="..." style='height: 350px;'>
                     </div>
                 </div>
-                <div class='col-lg-4 mid'>
+                <div class='col-lg-4 mid mobile-padding-top'>
                     <i class="fas fa-space-shuttle fa-4x"></i>
                     <h2>Space Invaders Game</h2>
                     <div style='padding-top:5%;'>
