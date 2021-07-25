@@ -202,6 +202,11 @@
         .face {
             width: 80%;
             height: auto;
+            border: 2px solid #100e17;
+            -moz-box-shadow: 0px 6px 5px #100e17;
+            -webkit-box-shadow: 0px 6px 5px #100e17;
+            box-shadow: 0px 6px 5px #100e17;
+            border-radius: 190px;
         }
 
         .bg {
@@ -226,6 +231,10 @@
 
         .demo-content {
             position: relative;
+        }
+
+        .navbar-toggler {
+            border: none;
         }
 
         @media only screen and (max-width: 768px) {
@@ -256,7 +265,13 @@
 
             [class*="mobile-buttons"] {
                 padding-top: 3%;
-            } 
+            }
+
+            [class*="responsive-image-2"] {
+                width: 100%;
+                height: 159%;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -268,7 +283,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-fixed-top">
             <!-- <div class="container-fluid"> -->
             <!-- <a class="navbar-brand" href="#">Shapira</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -366,19 +381,15 @@
             </div>
         </section>
     </div>
+    <img class="demo-bg2 responsive-image-2" src="bg3 - ready.jpg" alt="" style='padding-top:6.7%;'>
     <div class="container demo-content">
         <section id="features">
-            <!-- <img
-                class="demo-bg2"
-                src="bg3 - ready.jpg"
-                alt=""
-            > -->
             <h2 class='mid little-bold'>What I do</h2>
             <div class="row">
                 <div class="feature-box col-lg-4">
                     <div class="card text-white mb-3 shadow-lg p-3 blackish">
                         <div class="card-body mid">
-                            <i class="fas fa-code fa-3x" style='padding-bottom:5%;'></i>
+                            <i class="fas fa-code fa-3x" style='padding-bottom:5%; color:LightSalmon;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Web Development</h2>
                             <p class="card-text">Responsive websites built for an optimal user experience. Front to end,
                                 I take care of everything and makes sure
@@ -391,7 +402,7 @@
                     <div class="card text-white mb-3 shadow-lg p-3 blackish">
                         <div class="card-body mid">
 
-                            <i class="fab fa-python fa-3x" style='padding-bottom:5%;'></i>
+                            <i class="fab fa-python fa-3x" style='padding-bottom:5%; color:#3477ac;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Python</h2>
                             <p class="card-text">From Data Science to game developing. With Python as my main
                                 programming language, I can statisfy my customer without any problems.</p>
@@ -401,7 +412,7 @@
                 <div class="feature-box col-lg-4">
                     <div class="card text-white mb-3 shadow-lg p-3 blackish">
                         <div class="card-body mid">
-                            <i class="fas fa-robot fa-3x" style='padding-bottom:5%;'></i>
+                            <i class="fas fa-robot fa-3x" style='padding-bottom:5%; color:MediumAquaMarine;'></i>
                             <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>AI</h2>
                             <p class="card-text">Machine Learning is something very extraordinary. with NeuroEvolution
                                 of Augmenting Topologies, nothing is a challenge for my AI.</p>
@@ -680,7 +691,7 @@
         <section id='miniprojects' style=padding-bottom:10%;>
             <div class='row'>
                 <div class='col-lg-4 mid'>
-                    <i class="fas fa-microphone fa-4x"></i>
+                    <i class="fas fa-microphone fa-4x" style='color:Teal;'></i>
                     <h2>Lucy Voice Assistant</h2>
                     <div style='padding-top:5%;'>
                         Lucy is a Voice Assistant that can you help in your day to day lives on the PC.
@@ -693,7 +704,7 @@
                     </div>
                 </div>
                 <div class='col-lg-4 mid mobile-padding-top'>
-                    <i class="fas fa-gamepad fa-4x"></i>
+                    <i class="fas fa-gamepad fa-4x" style='color:BlanchedAlmond;'></i>
                     <h2>Game Downloader</h2>
                     <div style='padding-top:5%;'>
                         Game Downloader is an application that downloades games from IGG.
@@ -706,7 +717,7 @@
                     </div>
                 </div>
                 <div class='col-lg-4 mid mobile-padding-top'>
-                    <i class="fas fa-space-shuttle fa-4x"></i>
+                    <i class="fas fa-space-shuttle fa-4x" style='color:LightCoral;'></i>
                     <h2>Space Invaders Game</h2>
                     <div style='padding-top:5%;'>
                         Space Invaders is a 1978 shoot 'em up arcade game. I remade the game with different assets,
