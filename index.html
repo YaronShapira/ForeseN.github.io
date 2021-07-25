@@ -241,11 +241,8 @@
 
             [class*="responsive"] {
                 width: 100%;
-                height: auto;
-            }
-            [class*="mobile-hide"] {
-                visibility: hidden;
-                display: none;
+                height: 100%;
+                object-fit: cover;
             }
 
             [class*="mobile-hide"] {
@@ -256,6 +253,10 @@
             [class*="h1-mobile-smaller"] {
                 font-size: 3.0rem;
             }
+
+            [class*="mobile-buttons"] {
+                padding-top: 3%;
+            } 
         }
     </style>
 </head>
@@ -307,17 +308,18 @@
                     <button class="fab fa-twitter contact-item btn white"></button>
                     <button class="far fa-envelope contact-item btn white"></button>
                     <br>
-                    <div class='work-button'>
+                    <div class='mobile-buttons'>
+                        <div class='work-button'>
 
-                        <a type="button" class="btn btn-outline-success" style='width:10rem;' href='#projects'>
-                            See My Work
-                            <i class="fas fa-laptop-code" style='padding-left:5%;'></i>
-                        </a>
-                    </div>
-
-                    <div class='work-button'>
-                        <a type="button" class="btn btn-success" style='width:10rem;' href='#contact'>Hire Me Now<i
-                                class="fas fa-briefcase" style='padding-left:5%;'></i></a>
+                            <a type="button" class="btn btn-outline-success" style='width:9.8rem;' href='#projects'>
+                                See My Work
+                                <i class="fas fa-laptop-code" style='padding-left:5%;'></i>
+                            </a>
+                        </div>
+                        <div class='work-button'>
+                            <a type="button" class="btn btn-success" style='width:9.8rem;' href='#contact'>Hire Me
+                                Now<i class="fas fa-briefcase" style='padding-left:5%;'></i></a>
+                        </div>
                     </div>
                 </div>
 
@@ -722,7 +724,7 @@
 
     </div>
 
-    <img class="demo-bg2" src="secondbgCropped.jpg" alt="">
+    <img class="demo-bg2 responsive" src="secondbgCropped.jpg" alt="">
     <div class="container demo-content">
         <section id='contact' style='padding-top: 10%;'>
             <div class='row'>
