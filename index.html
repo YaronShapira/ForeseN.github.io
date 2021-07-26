@@ -246,6 +246,11 @@
             box-shadow: 0px 6px 5px #100e17;
         }
 
+        #collab {
+            text-align: center;
+            padding: 5% 0%;
+        }
+
         @media only screen and (max-width: 768px) {
 
             /* For mobile phones: */
@@ -280,6 +285,15 @@
                 width: 100%;
                 height: 159%;
                 object-fit: cover;
+            }
+
+            [class*="collab-padding"] {
+                padding-top: 45%;
+                padding-bottom: 10%;
+            }
+
+            [class*="5paddingtop"] {
+                padding-top: 5%;
             }
         }
     </style>
@@ -680,13 +694,16 @@
         </button>
     </div>
 
-
-    <div class='mid' style='padding-top: 5%; padding-bottom:10%;'>
-        <h3 style='padding-bottom:1%;'>Interested in collaborating?</h3>
-        <div style='padding-bottom:2%;'>I am always up for discussion about new products. Hit me up and let's talk.
+    <section id='collab'>
+        <div class='collab-padding'>
+            <h3 style='padding-bottom:1%;'>Interested in collaborating?</h3>
+            <div style='padding-bottom:2%;'>I am always up for discussion about new products. Hit me up and let's talk.
+            </div>
+            <div class='5paddingtop'>
+                <a type="button" class="btn btn-success rounded-pill" href='#contact'>Start a conversation</a>
+            </div>
         </div>
-        <a type="button" class="btn btn-success rounded-pill" href='#contact'>Start a conversation</a>
-    </div>
+    </section>
 
     <img class="demo-bg2 responsive" src="secondbgCropped.jpg" alt="">
     <div class="container demo-content">
