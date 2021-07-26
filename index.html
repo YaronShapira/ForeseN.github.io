@@ -340,11 +340,12 @@
                     <h3>Hey There !</h3>
                     <h1 class='h1-mobile-smaller'><span class='mobile-hide'>I am </span>Yaron Shapira</h1>
                     <h2>Computer Science Student and a Freelancer</h2>
-                    <button class="fab fa-facebook-f contact-item btn white"></button>
-                    <button class="fab fa-instagram contact-item btn white"></button>
-                    <button class="fab fa-github contact-item btn white"></button>
+                    <a class="fab fa-whatsapp contact-item btn white" href=#contact></a>
+                    <a class="fab fa-instagram contact-item btn white"
+                        href='https://www.instagram.com/yaron_shapira_k/'></a>
+                    <a class="fab fa-github contact-item btn white" href='https://github.com/ForeseN'></a>
                     <button class="fab fa-twitter contact-item btn white"></button>
-                    <button class="far fa-envelope contact-item btn white"></button>
+                    <a class="far fa-envelope contact-item btn white" href='#contact'></a>
                     <br>
                     <div class='mobile-buttons'>
                         <div class='work-button'>
@@ -558,7 +559,7 @@
                                 <div style='color:LightGrey;'> <i>Python, AI</i></div>
                                 <h2><i class="fas fa-robot fa-1x"></i> Python Machine Learning With NEAT</h2>
                                 <div style=' padding-top:3%;'>
-                                    These Project are all about teaching AI how to play a simple game (Flappy Bird,
+                                    These Projects are all about teaching AI how to play a simple game (Flappy Bird,
                                     Chrome Dino
                                     Game,
                                     Snake) which I built using the Pygame
@@ -590,19 +591,12 @@
                                 <div style='color:LightGrey;'> <i>Python, Web Development</i></div>
                                 <h2><i class="fas fa-comments fa-1x"></i> DarkChat - Realtime Chat website</h2>
                                 <div style=' padding-top:3%;'>
-                                    These Project are all about teaching AI how to play a simple game (Flappy Bird,
-                                    Chrome Dino
-                                    Game,
-                                    Snake) which I built using the Pygame
-                                    library.
-                                    In order to train the AI, I used the NEAT algorithm.
-                                    NEAT is an evolutionary algorithm that creates artificial neural networks.
-                                    NEAT is an algorithm which takes a batch of AIs (genomes) attempting to accomplish a
-                                    given task.
-                                    The top performing AIs “breed” to create the next generation.
-                                    This process continues until we have a generation which is capable of completing
-                                    what it needs
-                                    to.
+                                    The chat is handled by SocketIO which is a library that enables event-based
+                                    communication
+                                    between clients and a server. Flask handles the interaction with the user database.
+                                    For the
+                                    Database I used SQLAlchemy.
+                                    DarkChat has a Login page, Register page, Contact page and a Chat page.
                                 </div>
                                 <div style='padding-top:10.5%;'>
                                     <button type="button" class='btn btn-success rounded-pill'><i
@@ -624,14 +618,12 @@
                                         Arduino</i></div>
                                 <h2><i class="fas fa-cloud-sun fa-1x"></i> Home Weather Station Dashboard</h2>
                                 <div style=' padding-top:3%;'>
-                                    This project takes the temperature using the a temperature sensor and an Arduino
-                                    boards.
-                                    This data will be send over serial to the Raspberry Piboard editing a web page that
-                                    the
-                                    Raspberry Pi is hosting itself. The server saves the data for 25 hours and shows it
-                                    in a
-                                    beautiful graph made with Javascript.
-                                    the server uses OpenWeatherAPI to get data about the temperature outside(Humidity,
+                                    This project has a Raspberry Pi - the server, and 5 Arduino's with a temperature
+                                    sensor.
+                                    they send the temperature to the Raspberry Pi every 15 minutes and the Raspberry Pi
+                                    shows it in localhost webpage with a graph.
+                                    in addition,the server uses OpenWeatherAPI to get data about the temperature
+                                    outside(Humidity,
                                     Wind speed, Dew point etc) and shows it in a graph aswell.
                                     I even managed to collaborate with my <a href='https://github.com/gayuha'><i
                                             class="fab fa-github"></i> Brother</a> with his project:
