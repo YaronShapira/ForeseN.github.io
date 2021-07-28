@@ -251,6 +251,11 @@
             padding: 5% 0%;
         }
 
+        .pc-hide {
+            visibility: hidden;
+            display: none;
+        }
+
         @media only screen and (max-width: 768px) {
 
             /* For mobile phones: */
@@ -294,6 +299,11 @@
 
             [class*="5paddingtop"] {
                 padding-top: 5%;
+            }
+
+            [class*="mobile-show"] {
+                visibility: visible;
+                display: block;
             }
         }
     </style>
@@ -547,6 +557,9 @@
     <div class="container demo-content">
         <section id='featured-projects-test' style='padding: 12% 0%;'>
             <h2 class='little-bold mid' style='padding-bottom:7%;'>Featured Projects</h2>
+            <div class='mid pc-hide mobile-show' style='padding-bottom:7%; color:LightGrey; font-size: 0.8rem;'>Swipe
+                for more projects
+            </div>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item">
