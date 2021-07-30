@@ -256,6 +256,16 @@
             display: none;
         }
 
+        @media only screen and (min-width: 1025px) {
+            .carousel-control-next {
+                margin-right: -225px;
+            }
+
+            .carousel-control-prev {
+                margin-left: -225px;
+            }
+        }
+
         @media only screen and (max-width: 768px) {
 
             /* For mobile phones: */
@@ -305,8 +315,38 @@
                 visibility: visible;
                 display: block;
             }
+
+            [class*="mobile-09-rem"] {
+                font-size: 0.8rem;
+            }
+
+            [class*="mobile-carousel-height"] {
+                height: 850px;
+            }
+
         }
     </style>
+
+    <!-- <script>
+        function normalizeSlideHeights() {
+            $('.carousel').each(function () {
+                var items = $('.carousel-item', this);
+
+                // reset the height
+                items.css('min-height', 0);
+
+                // set the height
+                var maxHeight = Math.max.apply(null,
+                    items.map(function () {
+                        return $(this).outerHeight()
+                    }).get());
+
+                items.css('min-height', maxHeight + 'px');
+            })
+        }
+
+        $(window).on('resize orientationchange', normalizeSlideHeights);
+    </script> -->
 </head>
 
 <body class='dark-vertion black-bg'>
@@ -514,35 +554,35 @@
                 <div class='col-lg-5 mobile-padding-top'>
                     <h2 class='mid'>Professional Skills</h2>
                     <div class='row' style='padding-top: 5%;'>
-                        <div class='col-lg-6'>
+                        <div class='col-6'>
                             <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
                                 <div class="card-body text-success body-bg">
                                     <h5 class="card-title mid white">9/10</h5>
-                                    <p class="card-text mid white">Communication</p>
+                                    <p class="card-text mid white mobile-09-rem">Communication</p>
                                 </div>
                             </div>
                         </div>
-                        <div class='col-lg-6'>
+                        <div class='col-6'>
                             <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
                                 <div class="card-body text-success">
                                     <h5 class="card-title mid white">10/10</h5>
-                                    <p class="card-text mid white">Leadership</p>
+                                    <p class="card-text mid white mobile-09-rem">Leadership</p>
                                 </div>
                             </div>
                         </div>
-                        <div class='col-lg-6'>
+                        <div class='col-6'>
                             <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
                                 <div class="card-body text-success body-bg">
                                     <h5 class="card-title mid white">6.5/10</h5>
-                                    <p class="card-text mid white">Team Work</p>
+                                    <p class="card-text mid white mobile-09-rem">Team Work</p>
                                 </div>
                             </div>
                         </div>
-                        <div class='col-lg-6'>
+                        <div class='col-6'>
                             <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
                                 <div class="card-body text-success">
                                     <h5 class="card-title mid white">8/10</h5>
-                                    <p class="card-text mid white">Management</p>
+                                    <p class="card-text mid white mobile-09-rem">Management</p>
                                 </div>
                             </div>
                         </div>
@@ -552,6 +592,7 @@
 
         </section>
 
+
     </div>
     <img class="demo-bg2 responsive-image-2" src="bg3 - ready.jpg" alt="" style='padding-top:6.7%;'>
     <div class="container demo-content">
@@ -560,7 +601,8 @@
             <div class='mid pc-hide mobile-show' style='padding-bottom:7%; color:LightGrey; font-size: 0.8rem;'>Swipe
                 for more projects
             </div>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselExampleControls" class="carousel slide mobile-carousel-height" data-bs-ride="carousel"
+                data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item">
                         <div class='row'>
@@ -572,19 +614,12 @@
                                 <div style='color:LightGrey;'> <i>Python, AI</i></div>
                                 <h2><i class="fas fa-robot fa-1x"></i> Python Machine Learning With NEAT</h2>
                                 <div style=' padding-top:3%;'>
-                                    These Projects are all about teaching AI how to play a simple game (Flappy Bird,
-                                    Chrome Dino
-                                    Game,
-                                    Snake) which I built using the Pygame
-                                    library.
+                                    This Project is all about teaching AI how to play a simple game to perfection.
                                     In order to train the AI, I used the NEAT algorithm.
                                     NEAT is an evolutionary algorithm that creates artificial neural networks.
-                                    NEAT is an algorithm which takes a batch of AIs (genomes) attempting to accomplish a
-                                    given task.
-                                    The top performing AIs “breed” to create the next generation.
-                                    This process continues until we have a generation which is capable of completing
-                                    what it needs
-                                    to.
+                                    In the end, the AI learns how to play the game perfectly and never dies.
+                                    I've used the NEAT algorithm on Snake, Chrome Dino Game and Flappy Bird which are
+                                    all games I built with the Pygame library.
                                 </div>
                                 <div style='padding-top:10.5%;'>
                                     <button type="button" class='btn btn-success rounded-pill'><i
@@ -606,9 +641,10 @@
                                 <div style=' padding-top:3%;'>
                                     The chat is handled by SocketIO which is a library that enables event-based
                                     communication
-                                    between clients and a server. Flask handles the interaction with the user database.
-                                    For the
-                                    Database I used SQLAlchemy.
+                                    between clients and a server.
+                                    For the backend, I chose Flask as my module. It handles the all the interaction with
+                                    the user - login, register, contact, verification and everything that is backend.
+                                    For the Database I used SQLAlchemy which can easly work with Flask.
                                     DarkChat has a Login page, Register page, Contact page and a Chat page.
                                 </div>
                                 <div style='padding-top:10.5%;'>
@@ -636,14 +672,8 @@
                                     they send the temperature to the Raspberry Pi every 15 minutes and the Raspberry Pi
                                     shows it in localhost webpage with a graph.
                                     in addition,the server uses OpenWeatherAPI to get data about the temperature
-                                    outside(Humidity,
-                                    Wind speed, Dew point etc) and shows it in a graph aswell.
-                                    I even managed to collaborate with my <a href='https://github.com/gayuha'><i
-                                            class="fab fa-github"></i> Brother</a> with his project:
-                                    <i><a href='https://github.com/gayuha/BoilerTemp'>Solar water heating switching
-                                            system.</a></i>
-                                    and it shows the boiler temperature and much
-                                    more.
+                                    outside such as Humidity, Wind speed, Dew point etc.
+                                    It even has a tab for the solar water heating system information.
                                 </div>
                                 <div style='padding-top:10.5%;'>
                                     <button type="button" class='btn btn-success rounded-pill'><i
@@ -684,21 +714,23 @@
                     </div>
 
                 </div>
+                <!-- <div class='carousel buttons' style='padding: 0% 10%; position: relative;'> -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
     </div>
-    <div class='carousel buttons' style='padding: 0% 10%; position: relative;'>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+
+
+
 
     <section id='collab'>
         <div class='collab-padding'>
