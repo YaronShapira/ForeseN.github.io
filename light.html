@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yaron Shapira 2</title>
+    <link rel="icon" type="image/png" href="LightThemeImages/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="LightThemeImages/favicon-16x16.png" sizes="16x16" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;1,100;1,200&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .mid {
+            text-align: center;
+        }
+
+        .headstart {
+            padding-top: 5%;
+            font-weight: bold;
+        }
+
+        .face {
+            padding-top: 3%;
+            padding-bottom: 3%;
+        }
+
+        .navbar-padding {
+            padding-top: 2.5%;
+            padding-left: 15%;
+            padding-right: 20%;
+        }
+
+        .test {
+            outline: #6fb8e0 !important;
+        }
+
+        .nav-item {
+            padding-left: 10px;
+            padding-right: 15px;
+        }
+
+        .logo {
+            position: absolute;
+            margin-top: -5%;
+            margin-left: -3%;
+        }
+
+        .padding-0 {
+            padding: 0% 0%;
+        }
+
+        .blue-bg {
+            background: rgb(3, 80, 207);
+            background: linear-gradient(0deg, rgba(3, 80, 207, 1) 0%, rgba(3, 146, 207, 1) 50%, rgba(3, 146, 207, 1) 100%, rgba(3, 146, 207, 1) 100%);
+        }
+
+        .blue-bg-reverse {
+            background: rgb(3, 80, 207);
+            background: linear-gradient(180deg, rgba(3, 80, 207, 1) 0%, rgba(3, 146, 207, 1) 50%, rgba(3, 146, 207, 1) 100%, rgba(3, 146, 207, 1) 100%);
+        }
+
+        .btn-primary,
+        .btn-primary:active,
+        .btn-primary:visited {
+            background-color: #0392cf !important;
+            border-color: #0392cf !important;
+        }
+
+        .btn-outline-primary {
+            border-color: #0392cf !important;
+            color: #0392cf !important;
+            border-width: 2px !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #0372cf !important;
+            border-color: #0372cf !important;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0392cf !important;
+            border-color: #0392cf !important;
+            color: white !important;
+            border-width: 2px !important;
+        }
+
+
+        .blue-color {
+            color: #0392cf;
+        }
+
+        .skill-name {
+            padding-top: 10%;
+            padding-bottom: 10%;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .first-image {
+            padding-top: 7.5%;
+        }
+
+        .about {
+            padding: 0% 15%;
+        }
+
+        .divider {
+            width: 12px;
+            height: auto;
+            display: inline-block;
+        }
+
+        .divide-projects {
+            padding: 5% 0%;
+        }
+
+        .credits-boostrap {
+            padding-top: 7%;
+            color: SlateGrey;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .hover-effect :hover {
+            transition: .5s ease;
+            backface-visibility: hidden;
+            transform: scale(1.05);
+        }
+
+        .skills-margin {
+            margin-top: -20%;
+        }
+
+
+        @media only screen and (min-width: 1025px) {
+            .skills-1 {
+                height: 400px;
+                margin-right: -2%;
+            }
+
+            .skills-2 {
+                height: 400px;
+            }
+
+            .skills-3 {
+                height: 400px;
+                margin-left: -2%;
+            }
+
+            .paddingbtm23 {
+                padding-bottom: 23%;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            [class*="mobile-mid"] {
+                text-align: center !important;
+            }
+
+            [class*="first-image"] {
+                width: 100px;
+                height: auto;
+            }
+
+            [class*="images-padding"] {
+                padding-top: 23%;
+            }
+
+            [class*="14padding-top"] {
+                padding-top: 14%;
+            }
+
+            [class*="mobile-logo"] {
+                margin-left: -97px;
+                margin-top: -90px;
+
+            }
+
+            [class*="mobile-about"] {
+                padding: 0% 5%;
+
+            }
+
+            [class*="responsive"] {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            [class*="mobile-paddingbtm30"] {
+                padding-bottom: 70%;
+            }
+
+            [class*="mobile-width-75"] {
+                width: 80%;
+            }
+
+            [class*="mobile-skills-margin"] {
+                margin-top: -50%;
+            }
+
+            [class*="mobile-last-card-padding"] {
+                padding-bottom: 10%;
+            }
+
+            [class*="mobile-blue-card"] {
+                margin-bottom: -50% !important;
+            }
+
+            [class*="mobile-footer-padding"] {
+                padding-bottom: 10% !important;
+            }
+
+            [class*="footer-fix"] {
+                padding-top: 50% !important;
+            }
+
+            [class*="mobile-copywrite"] {
+                padding: 5% 0% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <div class='bg'> -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand navbar-padding" href="#" style='color:black;'>Yaron Shapira</a> -->
+            <a class="navbar-brand navbar-padding" style='color:black;'>
+                <img src='LightThemeImages/ShapiraLOGO3.png' class='logo mobile-logo'>
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto navbar-padding">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style='color:black;'>Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary rounded-pill" href="">Chat With Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1 class='mid headstart 14padding-top'>
+            Fullstack Developer & Python Programmer
+        </h1>
+        <div class='mid' style='padding-top:1%; font-size: 1.2rem;'>I enjoy coding and designing websites.</div>
+        <div class='mid hover-effect transition'>
+            <img src="LightThemeImages/facetest.svg" width="250" height='auto' class='face'>
+        </div>
+
+        <div class='mid'>
+            <div class='row 5padding-top' style='padding-top:8%;'>
+                <div class='col-4 images-padding'>
+                    <img src="LightThemeImages/pic1.svg" width="320" height='auto' class='first-image'> <!-- pic1-->
+                </div>
+                <div class='col-4 images-padding'>
+                    <img src="LightThemeImages/pic10.svg" width="320" height='auto' class='first-image'> <!-- pic5-->
+                </div>
+                <div class='col-4 images-padding'>
+                    <img src="LightThemeImages/pic4.svg" width="320" height='auto' class='first-image'> <!-- pic3-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 
+    <div class="container">
+
+
+
+        <div class='mid hover-effect'>
+            <img src="facetest.svg" width="250" height='auto' class='face'>
+        </div>
+
+        <h1 class='mid headstart'>
+            Fullstack Developer & Python Programmer
+        </h1>
+        <div class='mid' style='padding-top:2%; font-size: 1.2rem; padding-bottom:2%;'>I enjoy coding and designing
+            websites.</div>
+
+        <div class='mid'>
+            <div class='row 5padding-top' style='padding-top:5.1%;'>
+                <div class='col-4 images-padding'>
+                    <img src="pic1.svg" width="320" height='auto' class='first-image'>
+                </div>
+                <div class='col-4 images-padding'>
+                    <img src="pic5.svg" width="320" height='auto' class='first-image'>
+                </div>
+                <div class='col-4 images-padding'>
+                    <img src="pic3.svg" width="320" height='auto' class='first-image'>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div class='blue-bg paddingbtm23 mobile-paddingbtm30'>
+        <div class='container mid' style='padding-top:7%; color:white;'>
+            <h3 style='padding-bottom:2%; font-weight:bold;'>Hi, I’m Yaron. </h3>
+            <div class='mobile-about about'>I am a positive, enthusiastic and competent Web Developer / Pyhon Programmer
+                who loves coding and learning new stuff. Currently, I am working toward my Computer Science Degree in
+                Israel.
+                I am Looking to use my programming skills to help people fulfill their dreams. Whether it's a
+                website for a startup or just a familiy business site, Let me take care of it!</div>
+
+        </div>
+
+    </div>
+
+    <div class='container'>
+        <div class='row justify-content-md-center hover-effect mobile-skills-margin skills-margin transition'>
+            <div class='col-lg-4 padding-0'>
+                <div class="card rounded-3 shadow-lg p-5 skills-1 mobile-width-75 mx-auto ">
+                    <div class="card-body mid">
+                        <i class="fas fa-laptop-code fa-4x blue-color"></i>
+                        <div class='skill-name'>Web Developer</div>
+                        Quality, responsiveness & high performance websites with HTML, CSS, and JavaScript.
+                        <!-- <div class='holder blue-color' style='padding-top:20%; font-size:1.3rem;'>Tools:</div>
+                        HTML, CSS, Javascript, Python -->
+                    </div>
+                </div>
+            </div>
+            <div class='col-lg-4 padding-0'>
+                <div class="card rounded-3 shadow-lg p-5 skills-2 mobile-width-75 mx-auto">
+                    <div class="card-body mid">
+                        <i class="fab fa-python fa-4x blue-color"></i>
+                        <div class='skill-name'>Python</div>
+                        Python developer with experience in Flask for website projects and Pandas for Data Science.
+                        <!-- <div class='holder blue-color' style='padding-top:20%; font-size:1.3rem;'>Tools:</div>
+                        Flask, Pandas, Requests, Pygame, TKinter, Beautiful Soup, Selenuim, NEAT, Numpy -->
+                    </div>
+                </div>
+            </div>
+            <div class='col-lg-4 padding-0'>
+                <div class="card rounded-3 shadow-lg p-5 skills-3 mobile-width-75 mx-auto">
+                    <div class="card-body mid">
+                        <i class="fas fa-pencil-ruler fa-4x blue-color"></i>
+                        <div class='skill-name'>Design</div>
+                        Clean, minimalistic & modern designs that are optimized for performance and search engines.
+                        <!-- <div class='holder blue-color' style='padding-top:20%; font-size:1.3rem;'>Tools:</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='container mid'>
+        <h2 style='font-weight:bold; padding: 10% 0%;'>My Recent Portfolio</h2>
+        <!-- <a href='https://www.freepik.com/psd/background'>Background psd created by rawpixel.com - www.freepik.com</a> -->
+        <div class='row'>
+            <div class='col-lg-6'>
+                <img src='LightThemeImages/site1mockup.png' width=700 class='responsive'>
+            </div>
+            <div class='col-lg-6 portfolio-text'>
+                <h2 style='padding-bottom:5%;'>Dark Themed Portfolio Website</h2>
+                <div style='color:#696969'>
+                    Beautiful & responsive portfolio website to attract customers and showcase all of your hard work.
+                </div>
+                <div class='portfolio-buttons' style='padding-top:10%;'>
+                    <a type='button' class='btn btn-primary rounded-pill btn-lg' href='https://foresen.github.io/'>Visit
+                        Site</a>
+                    <div class='divider'></div>
+                    <a type='button' class='btn btn-outline-primary rounded-pill btn-lg'
+                        href='https://foresen.github.io/'>Purchase</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class='divide-projects'>
+        <hr>
+    </div>
+
+
+
+
+    <div class='container mid'>
+        <!-- <a href='https://www.freepik.com/psd/background'>Background psd created by rawpixel.com - www.freepik.com</a> -->
+        <div class='row'>
+            <div class='col-lg-6'>
+                <img src='LightThemeImages/site2mockup.png' width=700 class='responsive'>
+            </div>
+            <div class='col-lg-6 portfolio-text'>
+                <h2 style='padding-bottom:5%;'>Clean & Light Portfolio Website</h2>
+                <div style='color:#696969'>
+                    Clean & minimalistic portfolio website to attract customers and showcase all of your hard work.
+                </div>
+                <div class='portfolio-buttons' style='padding-top:10%;'>
+                    <a type='button' class='btn btn-primary rounded-pill btn-lg' href='https://foresen.github.io/'>Visit
+                        Site</a>
+                    <div class='divider'></div>
+                    <a type='button' class='btn btn-outline-primary rounded-pill btn-lg'
+                        href='https://foresen.github.io/'>Purchase</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class='divide-projects'>
+        <hr>
+    </div>
+
+    <div class='container mid'>
+        <!-- <a href='https://www.freepik.com/psd/background'>Background psd created by rawpixel.com - www.freepik.com</a> -->
+        <div class='row' style='padding-bottom:15%;'>
+            <div class='col-lg-6'>
+                <img src='LightThemeImages/site3mockup.png' width=700 class='responsive'>
+            </div>
+            <div class='col-lg-6 portfolio-text'>
+                <h2 style='padding-bottom:5%;'>Home Dashboard Control Site</h2>
+                <div style='color:#696969'>
+                    Local dashboard to control all your needs and view all the details you need to know about your home.
+                </div>
+                <div class='portfolio-buttons' style='padding-top:10%;'>
+                    <a type='button' class='btn btn-primary rounded-pill btn-lg' href='https://foresen.github.io/'>Visit
+                        Site</a>
+                    <div class='divider'></div>
+                    <a type='button' class='btn btn-outline-primary rounded-pill btn-lg'
+                        href='https://foresen.github.io/'>Purchase</a>
+                </div>
+
+                <div class='credits-boostrap'>
+                    Design by Boostrap, Edited by Me.
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .portfolio-text {
+            text-align: left;
+            padding-left: 10%;
+            padding-top: 5%;
+        }
+
+        .last-card {
+            margin-bottom: -7%;
+            color: white;
+        }
+
+        .white-text-btn {
+            color: white !important;
+        }
+
+        .link {
+            padding: 0% 2%;
+            color: white;
+        }
+
+        .copywrite {
+            color: white;
+            padding: 2% 0%;
+        }
+
+        .testi-header {
+            font-weight: bold;
+            padding-bottom: 6%;
+        }
+
+        .darkish {
+            background-color: #141c3a;
+        }
+
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 24px;
+            line-height: 1.33;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.42857;
+        }
+
+        .test1 {
+            border-radius: 15px;
+        }
+
+        .btn-outline-light {
+            color: #f8f9fa;
+            border-color: #f8f9fa;
+            border-width: 2px;
+        }
+
+        .btn-outline-light:hover {
+            color: black !important;
+            border-color: #f8f9fa;
+            border-width: 2px;
+            background-color: white !important;
+        }
+
+        .btn-social {
+            border-radius: 100%;
+            display: inline-flex;
+            width: 3.25rem;
+            height: 3.25rem;
+            font-size: 1.25rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mx-1 {
+            margin-right: 0.25rem !important;
+            margin-left: 0.25rem !important;
+        }
+
+        .footer-padding {
+            padding-top: 7%;
+        }
+    </style>
+
+    <div class='container'>
+        <div class='last-card'>
+            <div class="card p-4 rounded-3 mb-3 shadow-lg darkish mobile-blue-card">
+                <div class="card-body">
+                    <div class='row justify-content-md-center mid'>
+                        <div class='col-lg-4 justify-content-md-center mid mobile-last-card-padding'>
+                            <h2 style='font-weight:bold;'>Let's work together</h2>
+                        </div>
+                        <div class='col-lg-4 justify-content-md-center mid mobile-last-card-padding'>
+                            <div>Have a project you'd like to discuss? Let's talk and tackle it together!</div>
+                        </div>
+                        <div class='col-lg-4 justify-content-md-center mid'>
+                            <button class='btn-outline-primary white-text-btn btn btn-lg w-75 rounded-pill'>Let's
+                                Chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='blue-bg-reverse'>
+        <div class='container'>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class='testimonials mid'>
+                <div class='row justify-content-center footer-padding footer-fix'>
+                    <div class='col-lg-3 white  mobile-footer-padding'>
+                        <h2 class='testi-header'>Location</h2>
+                        Israel, Netanya
+                    </div>
+                    <div class='col-lg-3 white  mobile-footer-padding'>
+                        <h2 class='testi-header'>Find Me Here</h2>
+                        <div class='link'>
+                            <button class='btn-outline-light btn btn-social link mx-1'><i
+                                    class="fab fa-github fa-1x"></i></button>
+                            <button class='btn-outline-light btn btn-social link mx-1'><i
+                                    class="fab fa-instagram fa-1x"></i></button>
+                            <button class='btn-outline-light btn btn-social link mx-1'><i
+                                    class="fas fa-envelope fa-1x"></i></button>
+                        </div>
+                    </div>
+                    <div class='col-lg-3 white'>
+                        <h2 class='testi-header'>Links</h2>
+                        <a class='white' href=''>About</a>
+                        <br>
+                        <a class='white' href=''>Projects</a>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <br>
+        </div>
+    </div>
+    <div class='copywrite mid darkish mobile-copywrite'>
+        Copyright © 2021 by Yaron Shapira. All rights reserved.
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="position-fixed bottom-0 start-0 p-4" style="z-index: 11">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id='welcome_toast'>
+            <div class="toast-header">
+                <img src="LightThemeImages/fixedlogo.png" class="rounded me-2" alt="...">
+                <strong class="me-auto">Yaron Shapira</strong>
+                <small>Now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Welcome to my site. I hope you are enjoying your day so far!
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function show_toast(toast_id) {
+        toast = new bootstrap.Toast(document.getElementById(toast_id));
+        toast.show();
+    }
+
+    $(document).ready(function () {
+        if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {
+            show_toast('welcome_toast')
+        }
+    });
+</script>
+
+</html>
