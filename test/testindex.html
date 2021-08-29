@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yaron Shapira 2</title>
+    <link rel="icon" type="image/png" href="LightThemeImages/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="LightThemeImages/favicon-16x16.png" sizes="16x16" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;1,100;1,200&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .light-theme {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .dark-theme {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .vl {
+            border-left: 2px solid DarkGrey;
+            height: 937px;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            top: 0;
+        }
+
+        .about-page {
+            padding-top: 5%;
+            text-align: center;
+        }
+
+        .face {
+            padding: 10% 0%;
+        }
+
+        .dark-image {
+            width: 70%;
+            height: auto;
+            border: 2px solid #100e17;
+            -moz-box-shadow: 0px 6px 5px #100e17;
+            -webkit-box-shadow: 0px 6px 5px #100e17;
+            box-shadow: 0px 6px 5px #100e17;
+            border-radius: 190px;
+            position: relative;
+        }
+
+        .dark-card:hover {
+            transform: scale(1.1);
+        }
+
+        .light-card:hover {
+            transform: scale(1.1);
+        }
+
+        .transition {
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .demo-bg {
+            opacity: 0.15;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .responsive {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mid {
+            text-align: center;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .vertical-left {
+            writing-mode: vertical-rl;
+            text-orientation: use-glyph-orientation;
+        }
+
+        .vertical-right {
+            writing-mode: vertical-rl;
+            /* transform: rotate(-180deg); */
+        }
+
+        .yaron-shapira {
+            font-size: 1.9rem;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            /* For mobile phones: */
+            [class*="phone-img"] {
+                width: 90%;
+                height: auto;
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            [class*="phone-height"] {
+                height: 210px !important;
+            }
+
+            [class*="phone-anti-padding"] {
+                padding-top: -30% !important;
+            }
+
+            [class*="mobile-hide"] {
+                visibility: hidden;
+                display: none;
+            }
+
+            [class*="mobile-mid"] {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container' style='padding-top:4.0%;'>
+        <div class='row mx-auto justify-content-center'>
+            <div class='col-lg-5 light-theme'>
+                <!-- <a href="http://google.com"> -->
+                <div class='card p-5 rounded-3 mb-3 shadow-lg mx-auto light-card transition'>
+                    <div class="card-body phone-height" style='height:700px;'>
+                        <h1>Light Theme</h1>
+                        <div class='img face phone-img mid'>
+                            <img src='MainpageImages/facetest.svg' class='phone-img mid'>
+                        </div>
+                        <div class='about-page mobile-hide'>
+                            Clean & minimalistic portfolio website to attract customers and showcase all of your
+                            hard
+                            work.
+                        </div>
+                        <a href="https://foresen.github.io/test/light.html" class="stretched-link"></a>
+
+                    </div>
+                </div>
+                <!-- </a> -->
+            </div>
+            <div class='col-lg-2 mobile-hide'>
+                <div class='vertical-left yaron-shapira'>
+                    Yaron
+                </div>
+                <div class='vertical-right ms-auto yaron-shapira' style='padding-top:300%;'>
+                    Shapira
+                </div>
+            </div>
+            <div class='col-lg-5 dark-theme'>
+                <div class='card p-5 rounded-3 mb-3 shadow-lg mx-auto dark-card transition'
+                    style='background-color: #100e17; color:white;'>
+                    <img src='MainpageImages/bg3 - ready.jpg' class='demo-bg responsive'>
+                    <div class="card-body phone-height" style='height:700px;'>
+                        <h1>Dark Theme</h1>
+                        <div class='img face'>
+                            <img src='MainpageImages/face2.png' class='dark-image'>
+                        </div>
+                        <div class='about-page mobile-hide'>
+                            Beautiful & responsive portfolio website to attract customers and showcase all of your hard
+                            work.
+                        </div>
+                        <a href="https://foresen.github.io/" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

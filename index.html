@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yaron Shapira 2</title>
-    <link rel="icon" type="image/png" href="LightThemeImages/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="LightThemeImages/favicon-16x16.png" sizes="16x16" />
+    <title>Yaron Shapira</title>
+    <link rel="icon" type="image/png" href="DarkThemeImages/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="DarkThemeImages/favicon-16x16.png" sizes="16x16" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -17,77 +17,224 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,800;1,100;1,200&display=swap"
-        rel="stylesheet">
-
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
 
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1rem;
+            background-color: #100e17;
+            color: white;
+        }
+
+        .dark-vertion {
+            opacity: 0.9;
+        }
+
+        .navbar-nav {
+            float: none;
+            margin: 0 auto;
+            display: block;
             text-align: center;
-            background-color: #f5f5f5;
         }
 
-        .light-theme {
-            font-family: 'Poppins', sans-serif;
+        .navbar-nav>li {
+            display: inline-block;
+            float: none;
         }
 
-        .dark-theme {
-            font-family: 'Open Sans', sans-serif;
+        .nav-item {
+            padding: 0% 0%;
+            color: white;
         }
 
-        .vl {
-            border-left: 2px solid DarkGrey;
-            height: 937px;
-            position: absolute;
-            left: 50%;
-            margin-left: -3px;
-            top: 0;
+        .container-fluid {
+            padding: 2% 15% 10%;
         }
 
-        .about-page {
-            padding-top: 5%;
+        h3 {
+            font-size: 1.5rem;
+            padding-bottom: 3%;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            padding: 3% 0%;
+        }
+
+        h1 {
+            font-size: 3.4rem;
+        }
+
+        .contact-item {
+            padding: 0% 1%;
+        }
+
+        .work-button {
+            padding: 5% 0%;
+            display: inline-block;
+            padding-right: 2%;
+        }
+
+        .title {
+            background-image: url('home-bg-img.jpg');
+        }
+
+        .nav-link {
+            color: white;
+            font-weight: bold;
+        }
+
+        .white {
+            color: white;
+        }
+
+        #about {
+            padding-top: 30%;
+        }
+
+        #hello {
+            padding-top: 2%;
+        }
+
+        .about-image {
+            width: 80%;
+            height: 100%;
+            align-items: left;
+        }
+
+        .rtl {
+            text-align: right;
+        }
+
+        .tools {
             text-align: center;
+            padding-top: 1%;
+        }
+
+        .tool {
+            padding: 0% 1%;
+            font-size: 1.2rem;
+        }
+
+        .little-bold {
+            font-family: 'Open Sans Bold', sans-serif;
+            font-size: 1.9rem;
+            font-weight: bold;
+        }
+
+        .right-padding {
+            padding-right: 10%;
+        }
+
+        #features {
+            padding-top: 20%;
+        }
+
+        .mid {
+            text-align: center;
+        }
+
+        #skills {
+            padding-top: 20%;
+        }
+
+        .rtl-float {
+            float: right;
+        }
+
+        .body-bg {
+            background-color: #100e17;
+            opacity: 0.9;
+        }
+
+        .white {
+            color: white;
+        }
+
+        #projects {
+            padding-top: 20%;
+        }
+
+        #hello {
+            padding-top: 18%;
+        }
+
+        .navbar-fixed-top.scrolled {
+            background-color: #1f1e24 !important;
+            transition: background-color 200ms linear;
+            opacity: 1;
+        }
+
+        /* .active {
+            border-bottom: 1px solid;
+        } */
+
+        .blackish {
+            background-color: #1f1e24;
+        }
+
+        .flappy-bird {
+            width: 50%;
+            margin: auto;
+        }
+
+        .bs-linebreak {
+            height: 10px;
+        }
+
+        ngb-carousel:focus {
+            outline: none;
         }
 
         .face {
-            padding: 10% 0%;
-        }
-
-        .dark-image {
-            width: 70%;
+            width: 80%;
             height: auto;
             border: 2px solid #100e17;
             -moz-box-shadow: 0px 6px 5px #100e17;
             -webkit-box-shadow: 0px 6px 5px #100e17;
             box-shadow: 0px 6px 5px #100e17;
             border-radius: 190px;
-            position: relative;
         }
 
-        .dark-card:hover {
-            transform: scale(1.1);
-        }
-
-        .light-card:hover {
-            transform: scale(1.1);
-        }
-
-        .transition {
-            transition: .5s ease;
-            backface-visibility: hidden;
+        .bg {
+            background-image: url('bg.jpg');
         }
 
         .demo-bg {
@@ -97,57 +244,80 @@
             top: 0;
             width: 100%;
             height: auto;
-
         }
 
-        .responsive {
+        .demo-bg2 {
+            opacity: 0.15;
+            position: absolute;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
         }
 
-        .mid {
+        .demo-content {
+            position: relative;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .carousel-image {
+            border: 2px solid #100e17;
+            -moz-box-shadow: 0px 6px 5px #100e17;
+            -webkit-box-shadow: 0px 6px 5px #100e17;
+            box-shadow: 0px 6px 5px #100e17;
+        }
+
+        #collab {
             text-align: center;
+            padding: 5% 0%;
         }
 
-        .vertical-text {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
+        .pc-hide {
+            visibility: hidden;
+            display: none;
         }
 
-        .vertical-left {
-            writing-mode: vertical-rl;
-            text-orientation: use-glyph-orientation;
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 10px;
         }
 
-        .vertical-right {
-            writing-mode: vertical-rl;
-            /* transform: rotate(-180deg); */
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            border-radius: 10px;
         }
 
-        .yaron-shapira {
-            font-size: 1.9rem;
-            font-family: 'Roboto Mono', monospace;
+        ::-webkit-scrollbar-thumb {
+            background-color: #676767;
+            border-radius: 10px;
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .carousel-control-next {
+                margin-right: -225px;
+            }
+
+            .carousel-control-prev {
+                margin-left: -225px;
+            }
         }
 
         @media only screen and (max-width: 768px) {
 
             /* For mobile phones: */
-            [class*="phone-img"] {
-                width: 90%;
-                height: auto;
+            [class*="mobile-mid"] {
                 text-align: center;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
             }
 
-            [class*="phone-height"] {
-                height: 210px !important;
+            [class*="mobile-padding-top"] {
+                padding-top: 8%;
             }
 
-            [class*="phone-anti-padding"] {
-                padding-top: -30% !important;
+            [class*="responsive"] {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
             [class*="mobile-hide"] {
@@ -155,68 +325,569 @@
                 display: none;
             }
 
-            [class*="mobile-mid"] {
-                text-align: center;
+            [class*="h1-mobile-smaller"] {
+                font-size: 3.0rem;
             }
+
+            [class*="mobile-buttons"] {
+                padding-top: 3%;
+            }
+
+            [class*="responsive-image-2"] {
+                width: 100%;
+                height: 159%;
+                object-fit: cover;
+            }
+
+            [class*="collab-padding"] {
+                padding-top: 45%;
+                padding-bottom: 10%;
+            }
+
+            [class*="5paddingtop"] {
+                padding-top: 5%;
+            }
+
+            [class*="mobile-show"] {
+                visibility: visible;
+                display: block;
+            }
+
+            [class*="mobile-09-rem"] {
+                font-size: 0.8rem;
+            }
+
+            [class*="mobile-carousel-height"] {
+                height: 850px;
+            }
+
+        }
+    </style>
+
+    <!-- <script>
+        function normalizeSlideHeights() {
+            $('.carousel').each(function () {
+                var items = $('.carousel-item', this);
+
+                // reset the height
+                items.css('min-height', 0);
+
+                // set the height
+                var maxHeight = Math.max.apply(null,
+                    items.map(function () {
+                        return $(this).outerHeight()
+                    }).get());
+
+                items.css('min-height', maxHeight + 'px');
+            })
+        }
+
+        $(window).on('resize orientationchange', normalizeSlideHeights);
+    </script> -->
+
+    <script>
+        $(document).ready(function () {
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function () {
+
+                /* Check the location of each desired element */
+                $('.hideme').each(function (i) {
+
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 500);
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+    <style>
+        .hideme {
+            opacity: 0;
         }
     </style>
 </head>
 
-<body>
-    <div class='container' style='padding-top:4.0%;'>
-        <div class='row mx-auto justify-content-center'>
-            <div class='col-lg-5 light-theme'>
-                <!-- <a href="http://google.com"> -->
-                <div class='card p-5 rounded-3 mb-3 shadow-lg mx-auto light-card transition'>
-                    <div class="card-body phone-height" style='height:700px;'>
-                        <h1>Light Theme</h1>
-                        <div class='img face phone-img mid'>
-                            <img src='MainpageImages/facetest.svg' class='phone-img mid'>
-                        </div>
-                        <div class='about-page mobile-hide'>
-                            Clean & minimalistic portfolio website to attract customers and showcase all of your
-                            hard
-                            work.
-                        </div>
-                        <a href="https://foresen.github.io/light.html" class="stretched-link"></a>
+<body class='dark-vertion black-bg'>
+    <img class="demo-bg responsive" src="DarkThemeImages/bg3 - ready.jpg" alt="">
+    <div class="container demo-content">
+        <!-- <div class='bg'> -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-fixed-top">
+            <!-- <div class="container-fluid"> -->
+            <!-- <a class="navbar-brand" href="#">Shapira</a> -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style='color:white;'>Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#about" style='color:white;'>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" style='color:white;'>Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#featured-projects-test" style='color:white;'>Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" style='color:white;'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </nav>
+        <section id='hello'>
+            <div class="row mobile-mid">
+                <div class="col-sm-4 order-lg-1">
+                    <img class="title-image face" src="DarkThemeImages/face2.png" alt="iphone-mockup" />
+                </div>
+                <div class="col-sm-8 mobile-padding-top">
+                    <h3>Hey There !</h3>
+                    <h1 class='h1-mobile-smaller'><span class='mobile-hide'>I am </span>Yaron Shapira</h1>
+                    <h2>Computer Science Student and a Freelancer</h2>
+                    <a class="fab fa-whatsapp contact-item btn white" href=#contact></a>
+                    <a class="fab fa-instagram contact-item btn white"
+                        href='https://www.instagram.com/yaron_shapira_k/'></a>
+                    <a class="fab fa-github contact-item btn white" href='https://github.com/ForeseN'></a>
+                    <button class="fab fa-twitter contact-item btn white"></button>
+                    <a class="far fa-envelope contact-item btn white" href='#contact'></a>
+                    <br>
+                    <div class='mobile-buttons'>
+                        <div class='work-button'>
 
+                            <a type="button" class="btn btn-outline-success" style='width:9.8rem;'
+                                href='#featured-projects-test'>
+                                See My Work
+                                <i class="fas fa-laptop-code" style='padding-left:5%;'></i>
+                            </a>
+                        </div>
+                        <div class='work-button'>
+                            <a type="button" class="btn btn-success" style='width:9.8rem;' href='#contact'>Hire Me
+                                Now<i class="fas fa-briefcase" style='padding-left:5%;'></i></a>
+                        </div>
                     </div>
                 </div>
-                <!-- </a> -->
+
+
             </div>
-            <div class='col-lg-2 mobile-hide'>
-                <div class='vertical-left yaron-shapira'>
-                    Yaron
+        </section>
+        <!-- </div> -->
+        <section id='about'>
+            <div class="row hideme">
+                <div class="col-lg-6 mid">
+                    <img class="about-image" src="DarkThemeImages/pc3.png" alt="iphone-mockup" />
                 </div>
-                <div class='vertical-right ms-auto yaron-shapira' style='padding-top:300%;'>
-                    Shapira
+                <div class="col-lg-6 mid d-flex flex-column justify-content-center">
+                    <h2 class='little-bold'>Hi, I’m Yaron.</h2>
+                    I am a positive, enthusiastic and competent Web Developer / Pyhon Programmer who loves coding and
+                    learning new stuff. Currently, I am working toward my Computer Science Degree in Israel. I have
+                    experience with web-developing, front to end, AI with Python, game-dev with Pygame, Raspberry Pi,
+                    Arduino and more.
+                    <br>
+                    <br>
+                    <div class='tools'>
+                        <!-- <span class='btn btn-outline-success tool'>Python</span>
+                    <span class='btn btn-outline-success tool'>HTML</span>
+                    <span class='btn btn-outline-success tool'>CSS</span>
+                    <span class='btn btn-outline-success tool'>Javascript</span> -->
+                        <span class='tool'>
+                            <span class="badge bg-success">Python</span>
+                        </span>
+                        <span class='tool'>
+                            <span class="badge bg-success">HTML</span>
+                        </span>
+                        <span class='tool'>
+                            <span class="badge bg-success">CSS</span>
+                        </span>
+                        <span class='tool'>
+                            <span class="badge bg-success">Javascript</span>
+                        </span>
+                        <span class='tool'>
+                            <span class="badge bg-success">Raspberry Pi</span>
+                        </span>
+                    </div>
                 </div>
+
+
             </div>
-            <div class='col-lg-5 dark-theme'>
-                <div class='card p-5 rounded-3 mb-3 shadow-lg mx-auto dark-card transition'
-                    style='background-color: #100e17; color:white;'>
-                    <img src='MainpageImages/bg3 - ready.jpg' class='demo-bg responsive'>
-                    <div class="card-body phone-height" style='height:700px;'>
-                        <h1>Dark Theme</h1>
-                        <div class='img face'>
-                            <img src='MainpageImages/face2.png' class='dark-image'>
+        </section>
+    </div>
+    <img class="demo-bg2 responsive-image-2" src="DarkThemeImages/bg3 - ready.jpg" alt="" style='padding-top:6.7%;'>
+    <div class="container demo-content">
+        <section id="features">
+            <h2 class='mid little-bold hideme'>What I do</h2>
+            <div class="row hideme">
+                <div class="feature-box col-lg-4">
+                    <div class="card text-white mb-3 shadow-lg p-5 blackish">
+                        <div class="card-body mid">
+                            <i class="fas fa-code fa-3x" style='padding-bottom:5%; color:#D1495B;'></i>
+                            <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Web Development</h2>
+                            <p class="card-text">Quality, responsiveness & high performance websites with HTML, CSS,
+                                JavaScript and Bootstrap.
+                            </p>
                         </div>
-                        <div class='about-page mobile-hide'>
-                            Beautiful & responsive portfolio website to attract customers and showcase all of your hard
-                            work.
+                    </div>
+                </div>
+                <div class="feature-box col-lg-4">
+                    <div class="card text-white mb-3 shadow-lg p-5 blackish">
+                        <div class="card-body mid">
+
+                            <i class="fab fa-python fa-3x" style='padding-bottom:5%; color:#3477ac;'></i>
+                            <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Python</h2>
+                            <p class="card-text">Python developer with experience in Flask, Pygame, Web-Scraping and
+                                much more.</p>
                         </div>
-                        <a href="https://foresen.github.io/dark.html" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="feature-box col-lg-4">
+                    <div class="card text-white mb-3 shadow-lg p-5 blackish">
+                        <div class="card-body mid">
+                            <i class="fas fa-database fa-3x" style='padding-bottom:5%; color:#EDAE49;'></i>
+                            <h2 class="card-title" style='text-align:center; padding-bottom:5%;'>Data Science</h2>
+                            <p class="card-text">Currently learning Pandas for Data Science and doing mini projects to
+                                learn more.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+    </div>
+
+
+    <div class="container demo-content">
+        <section id='skills'>
+            <div class='row'>
+
+                <div class='col-lg-5 hideme'>
+                    <h2 class='mid'>Technical Skills</h2>
+
+                    <div style='padding-bottom: 1.5%;'>
+                        <span>Python</span>
+                        <div class='rtl-float'>90%</div>
+                    </div>
+                    <div class="progress" style='height: 10px;'>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+
+                    <div style='padding-bottom: 1.5%;'>
+                        <span>HTML</span>
+                        <div class='rtl-float'>70%</div>
+                    </div>
+                    <div class="progress" style='height: 10px;'>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+
+                    <div style='padding-bottom: 1.5%;'>
+                        <span>CSS</span>
+                        <div class='rtl-float'>70%</div>
+                    </div>
+                    <div class="progress" style='height: 10px;'>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+
+                    <div style='padding-bottom: 1.5%;'>
+                        <span>JavaScript</span>
+                        <div class='rtl-float'>25%</div>
+                    </div>
+                    <div class="progress" style='height: 10px;'>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+
+
+                </div>
+
+                <div class='col-lg-2'></div>
+
+
+                <div class='col-lg-5 mobile-padding-top hideme'>
+                    <h2 class='mid'>Professional Skills</h2>
+                    <div class='row' style='padding-top: 5%;'>
+                        <div class='col-6'>
+                            <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
+                                <div class="card-body text-success body-bg">
+                                    <h5 class="card-title mid white">9/10</h5>
+                                    <p class="card-text mid white mobile-09-rem">Communication</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-6'>
+                            <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
+                                <div class="card-body text-success">
+                                    <h5 class="card-title mid white">10/10</h5>
+                                    <p class="card-text mid white mobile-09-rem">Leadership</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-6'>
+                            <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
+                                <div class="card-body text-success body-bg">
+                                    <h5 class="card-title mid white">6.5/10</h5>
+                                    <p class="card-text mid white mobile-09-rem">Team Work</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-6'>
+                            <div class="card border-success mb-3 p-2 body-bg mx-auto" style="max-width: 11rem;">
+                                <div class="card-body text-success">
+                                    <h5 class="card-title mid white">8/10</h5>
+                                    <p class="card-text mid white mobile-09-rem">Management</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+    <img class="demo-bg2 responsive-image-2" src="DarkThemeImages/bg3 - ready.jpg" alt="" style='padding-top:6.7%;'>
+    <div class="container demo-content">
+        <section id='featured-projects-test' style='padding: 12% 0%;'>
+            <h2 class='little-bold mid hideme' style='padding-bottom:7%;'>Featured Projects</h2>
+            <div class='mid pc-hide mobile-show' style='padding-bottom:7%; color:LightGrey; font-size: 0.8rem;'>Swipe
+                for more projects
+            </div>
+            <div id="carouselExampleControls" class="carousel slide mobile-carousel-height hideme"
+                data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <img src="DarkThemeImages/ChromeDinoPHOTO.png" class="d-block w-100 carousel-image"
+                                    alt="..." style='height: 450px;'>
+                            </div>
+                            <div class='col-lg-6 mobile-mid'>
+                                <div style='color:LightGrey;'> <i>Python, AI</i></div>
+                                <h2><i class="fas fa-robot fa-1x"></i> Python Machine Learning With NEAT</h2>
+                                <div style=' padding-top:3%;'>
+                                    This Project is all about teaching AI how to play a simple game to perfection.
+                                    In order to train the AI, I used the NEAT algorithm.
+                                    NEAT is an evolutionary algorithm that creates artificial neural networks.
+                                    In the end, the AI learns how to play the game perfectly and never dies.
+                                    I've used the NEAT algorithm on Snake, Chrome Dino Game and Flappy Bird which are
+                                    all games I built with the Pygame library.
+                                </div>
+                                <div style='padding-top:10.5%;'>
+                                    <a class='btn btn-success rounded-pill'
+                                        href='https://github.com/ForeseN/Pygame-with-AI'><i class="fab fa-github"></i>
+                                        Github
+                                        Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <img src="DarkThemeImages/loginpage2.png" class="d-block w-100 carousel-image" alt="..."
+                                    style='height: 450px;'>
+                            </div>
+                            <div class='col-lg-6 mobile-mid'>
+                                <div style='color:LightGrey;'> <i>Python, Web Development</i></div>
+                                <h2><i class="fas fa-comments fa-1x"></i> DarkChat - Realtime Chat website</h2>
+                                <div style=' padding-top:3%;'>
+                                    The chat is handled by SocketIO which is a library that enables event-based
+                                    communication
+                                    between clients and a server.
+                                    For the backend, I chose Flask as my module. It handles the all the interaction with
+                                    the user - login, register, contact, verification and everything that is backend.
+                                    For the Database I used SQLAlchemy which can easly work with Flask.
+                                    DarkChat has a Login page, Register page, Contact page and a Chat page.
+                                </div>
+                                <div style='padding-top:10.5%;'>
+                                    <a class='btn btn-success rounded-pill'
+                                        href='https://github.com/ForeseN/DarkChat'><i class="fab fa-github"></i> Github
+                                        Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <img src="DarkThemeImages/homedashboard.png" class="d-block w-100 carousel-image"
+                                    alt="..." style='height: 450px;'>
+                            </div>
+                            <div class='col-lg-6 mobile-mid'>
+                                <div style='color:LightGrey;'> <i>Python, Web Development, Raspberry
+                                        Pi,
+                                        Arduino</i></div>
+                                <h2><i class="fas fa-cloud-sun fa-1x"></i> Home Weather Station Dashboard</h2>
+                                <div style=' padding-top:3%;'>
+                                    This project has a Raspberry Pi - the server, and 5 Arduino's with a temperature
+                                    sensor.
+                                    they send the temperature to the Raspberry Pi every 15 minutes and the Raspberry Pi
+                                    shows it in localhost webpage with a graph.
+                                    in addition,the server uses OpenWeatherAPI to get data about the temperature
+                                    outside such as Humidity, Wind speed, Dew point etc.
+                                    It even has a tab for the solar water heating system information.
+                                </div>
+                                <div style='padding-top:10.5%;'>
+                                    <a class='btn btn-success rounded-pill'
+                                        href='https://github.com/ForeseN/RPI-Weather-Station'><i
+                                            class="fab fa-github"></i>
+                                        Github
+                                        Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item active">
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <img src="DarkThemeImages/spaceinvaders.png" class="d-block w-100 carousel-image"
+                                    alt="..." style='height: 450px;'>
+                            </div>
+                            <div class='col-lg-6 mobile-mid'>
+                                <div style='color:LightGrey;'> <i>Python</i></div>
+                                <h2><i class="fas fa-space-shuttle fa-1x"></i> Space Invaders Game</h2>
+                                <div style=' padding-top:3%;'>
+                                    Space Invaders is a 1978 shoot 'em up arcade game. I remade the game with different
+                                    assets,
+                                    mechanics and added my own content.
+                                    This game features a rich story experience with various cutscenes, a handful of
+                                    bosses and more than 10 different enemy types. This game
+                                    was made
+                                    with the Pygame module.
+                                </div>
+                                <div style='padding-top:10.5%;'>
+                                    <div class='btn btn-outline-success rounded-pill'><i class="fab fa-github"></i>
+                                        Github
+                                        Link Not Available</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class='carousel buttons' style='padding: 0% 10%; position: relative;'> -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
     </div>
 
 
 
 
+    <section id='collab'>
+        <div class='collab-padding hideme'>
+            <h3 style='padding-bottom:1%;'>Interested in collaborating?</h3>
+            <div style='padding-bottom:2%;'>I am always up for discussion about new products. Hit me up and let's talk.
+            </div>
+            <div class='5paddingtop'>
+                <a type="button" class="btn btn-success rounded-pill" href='#contact'>Start a conversation</a>
+            </div>
+        </div>
+    </section>
 
+    <img class="demo-bg2 responsive" src="DarkThemeImages/secondbgCropped.jpg" alt="">
+    <div class="container demo-content">
+        <section id='contact' style='padding-top: 10%;'>
+            <div class='row'>
+                <div class='col-lg-3'>
 
+                </div>
+                <div class='col-lg-6 hideme'>
+                    <h2 class='mid' style='padding-bottom:9%;'>Let's Collaborate!</h2>
+                    <form action="https://formspree.io/f/xnqllqky" method="POST">
+                        <div class='row'>
+                            <div class='col-lg-6'>
+                                <div class="mb-3">
+                                    <!-- <label for="exampleInputEmail1" class="form-label">Your Fullname</label> -->
+                                    <input class="form-control transparent-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder='First Name' style='color:white;'>
+
+                                </div>
+                            </div>
+                            <div class='col-lg-6'>
+                                <div class="mb-3">
+                                    <!-- <label for="exampleInputEmail1" class="form-label">Your Fullname</label> -->
+                                    <input class="form-control transparent-input" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder='Last Name' style='color:white;'>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <!-- <label for="exampleInputPassword1" class="form-label">Your Email</label> -->
+                            <input type="email" class="form-control transparent-input" id="email"
+                                placeholder='Your Email' style='color:white;' name="_replyto">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <!-- <label for="exampleFormControlTextarea1" class="form-label">Your Message</label> -->
+                            <textarea class="form-control transparent-input" id="exampleFormControlTextarea1" rows="5"
+                                placeholder='Your Message' style='color:white;' name="message"></textarea>
+                        </div>
+                        <div style='padding-top:5%;'>
+                            <button type="submit" class="btn btn-outline-success rounded-pill" style='width:100%;'>Send
+                                Message</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class='col-lg-3'>
+
+                </div>
+            </div>
+            <br>
+            <br>
+        </section>
+
+        <section id='footer' style='padding-top:8%;'>
+            <div class='mid'>
+                Copyright © 2021 by Yaron Shapira. All rights reserved.
+                <div style='padding-top:2%;'>
+                    <button class="fab fa-facebook-f contact-item btn white"></button>
+                    <button class="fab fa-instagram contact-item btn white"></button>
+                    <button class="fab fa-whatsapp contact-item btn white"></button>
+                    <button class="fab fa-twitter contact-item btn white"></button>
+                    <button class="far fa-envelope contact-item btn white"></button>
+                    <button class="fab fa-github contact-item btn white"></button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <style>
+        .transparent-input {
+            background-color: rgba(0, 0, 0, 0) !important;
+        }
+    </style>
 
 
 </body>
