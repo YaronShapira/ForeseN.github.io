@@ -100,6 +100,7 @@
 
         h1 {
             font-size: 3.4rem;
+            font-weight: bold;
         }
 
         .contact-item {
@@ -226,10 +227,10 @@
         .face {
             width: 80%;
             height: auto;
-            border: 2px solid #100e17;
-            -moz-box-shadow: 0px 6px 5px #100e17;
-            -webkit-box-shadow: 0px 6px 5px #100e17;
-            box-shadow: 0px 6px 5px #100e17;
+            border: 2px solid #0c0a0f;
+            -moz-box-shadow: 0px 6px 5px #0c0a0f;
+            -webkit-box-shadow: 0px 6px 5px #0c0a0f;
+            box-shadow: 0px 6px 5px #0c0a0f;
             border-radius: 190px;
         }
 
@@ -457,7 +458,11 @@
                     <img class="title-image face" src="DarkThemeImages/face2.png" alt="iphone-mockup" />
                 </div>
                 <div class="col-sm-8 mobile-padding-top">
-                    <h3>Hey There !</h3>
+                    <!-- <div style='padding-bottom:2%;'>
+                        <h3 class="badge bg-success lg pill rounded-pill shadow-lg"
+                            style='font-size:1.1rem; padding:1.2%'>Hello There !</h3>
+                    </div> -->
+                    <h3>Hello There !</h3>
                     <h1 class='h1-mobile-smaller'><span class='mobile-hide'></span>Yaron Shapira</h1>
                     <h2>Computer Science Student and a Freelancer</h2>
                     <a class="fab fa-whatsapp contact-item btn white" href=#contact></a>
@@ -489,11 +494,11 @@
         </section>
         <!-- </div> -->
         <section id='about'>
-            <div class="row hideme">
-                <div class="col-lg-6 mid">
+            <div class="row">
+                <div class="col-lg-6 mid hideme">
                     <img class="about-image" src="DarkThemeImages/pc3.png" alt="iphone-mockup" />
                 </div>
-                <div class="col-lg-6 mid d-flex flex-column justify-content-center">
+                <div class="col-lg-6 mid d-flex flex-column justify-content-center hideme">
                     <h2 class='little-bold'>Hi, I’m Yaron.</h2>
                     I am a positive, enthusiastic and competent Web Developer / Pyhon Programmer who loves coding and
                     learning new stuff. Currently, I am working toward my Computer Science Degree in Israel. I have
@@ -531,9 +536,9 @@
     <img class="demo-bg2 responsive-image-2" src="DarkThemeImages/bg3 - ready.jpg" alt="" style='padding-top:6.7%;'>
     <div class="container demo-content">
         <section id="features">
-            <h2 class='mid little-bold hideme'>What I do</h2>
-            <div class="row hideme">
-                <div class="feature-box col-lg-4">
+            <h2 class='mid little-bold hideme'>My Skillset</h2>
+            <div class="row">
+                <div class="feature-box col-lg-4 hideme">
                     <div class="card text-white mb-3 shadow-lg p-5 blackish">
                         <div class="card-body mid">
                             <i class="fas fa-code fa-3x" style='padding-bottom:5%; color:#D1495B;'></i>
@@ -544,7 +549,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="feature-box col-lg-4">
+                <div class="feature-box col-lg-4 hideme">
                     <div class="card text-white mb-3 shadow-lg p-5 blackish">
                         <div class="card-body mid">
 
@@ -555,7 +560,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="feature-box col-lg-4">
+                <div class="feature-box col-lg-4 hideme">
                     <div class="card text-white mb-3 shadow-lg p-5 blackish">
                         <div class="card-body mid">
                             <i class="fas fa-database fa-3x" style='padding-bottom:5%; color:#EDAE49;'></i>
@@ -669,15 +674,16 @@
     <div class="container demo-content">
         <section id='featured-projects-test' style='padding: 12% 0%;'>
             <h2 class='little-bold mid hideme' style='padding-bottom:7%;'>Featured Projects</h2>
-            <div class='mid pc-hide mobile-show' style='padding-bottom:7%; color:LightGrey; font-size: 0.8rem;'>Swipe
+            <div class='mid pc-hide mobile-show hideme' style='padding-bottom:7%; color:LightGrey; font-size: 0.8rem;'>
+                Swipe
                 for more projects
             </div>
-            <div id="carouselExampleControls" class="carousel slide mobile-carousel-height hideme"
-                data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselExampleControls" class="carousel slide mobile-carousel-height" data-bs-ride="carousel"
+                data-bs-interval="false">
                 <div class="carousel-inner">
                     <div class="carousel-item">
                         <div class='row'>
-                            <div class='col-lg-6'>
+                            <div class='col-lg-6 hideme'>
                                 <img src="DarkThemeImages/ChromeDinoPHOTO.png" class="d-block w-100 carousel-image"
                                     alt="..." style='height: 450px;'>
                             </div>
@@ -703,11 +709,11 @@
                     </div>
                     <div class="carousel-item">
                         <div class='row'>
-                            <div class='col-lg-6'>
+                            <div class='col-lg-6 hideme'>
                                 <img src="DarkThemeImages/loginpage2.png" class="d-block w-100 carousel-image" alt="..."
                                     style='height: 450px;'>
                             </div>
-                            <div class='col-lg-6 mobile-mid'>
+                            <div class='col-lg-6 mobile-mid hideme'>
                                 <div style='color:LightGrey;'> <i>Python, Web Development</i></div>
                                 <h2><i class="fas fa-comments fa-1x"></i> DarkChat - Realtime Chat website</h2>
                                 <div style=' padding-top:3%;'>
