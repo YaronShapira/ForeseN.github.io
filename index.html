@@ -404,7 +404,7 @@
                     var bottom_of_window = $(window).scrollTop() + $(window).height();
 
                     /* If the object is completely visible in the window, fade it it */
-                    if (bottom_of_window > bottom_of_object) {
+                    if (bottom_of_window > bottom_of_object - 160) {
 
                         $(this).animate({
                             'opacity': '1'
@@ -472,7 +472,7 @@
         <section id='hello'>
             <div class="row mobile-mid">
                 <div class="col-sm-4 order-lg-1">
-                    <img class="title-image face" src="DarkThemeImages/face2.png" alt="iphone-mockup" />
+                    <img class="title-image face" src="DarkThemeImages/face2.png" alt="My Photo" />
                 </div>
                 <div class="col-sm-8 mobile-padding-top">
                     <!-- <div style='padding-bottom:2%;'>
