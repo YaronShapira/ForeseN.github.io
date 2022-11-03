@@ -752,7 +752,7 @@ a:after {
     /* --clr-neon: hsl(317 100% 54%);
     --clr-bg: hsl(323 21% 16%); */
     --clr-neon: #c0a062;
-    --clr-bg: black;
+    --clr-bg: #c0a062;
 }
 
 *,
